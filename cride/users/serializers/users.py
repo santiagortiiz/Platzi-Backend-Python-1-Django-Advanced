@@ -27,7 +27,7 @@ class UserModelSerializer(serializers.ModelSerializer):
         )
 
 
-class UserLoginSerializer(serializers.ModelSerializer):
+class UserLoginSerializer(serializers.Serializer):
     """User login serializer.
 
     Handle the login request data.
