@@ -78,7 +78,7 @@ class MembershipViewSet(mixins.ListModelMixin,
             circle=self.circle,
             issued_by=request.user,
             used=False
-        ).values_list('code')
+        ).values_list('code') # .values_list('code', flat=True) para evitar linea 84 
         diff = member.remaining_invitations - len(unused_invitations)
 
         invitations = [x[0] for x in unused_invitations]
